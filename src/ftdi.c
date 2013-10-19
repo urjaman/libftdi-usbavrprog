@@ -2829,7 +2829,7 @@ int ftdi_eeprom_build(struct ftdi_context *ftdi)
             output[0x14] = eeprom->chip;
             break;
         case TYPE_R:
-            if (eeprom->high_current == HIGH_CURRENT_DRIVE_R)
+            if (eeprom->high_current)
                 output[0x00] |= HIGH_CURRENT_DRIVE_R;
             output[0x01] = 0x40; /* Hard coded Endpoint Size*/
 
