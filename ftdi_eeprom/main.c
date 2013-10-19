@@ -240,7 +240,7 @@ int main(int argc, char *argv[])
 
     if (_read > 0)
     {
-        ftdi_eeprom_decode(ftdi, 0 /* debug: 1 */);
+        ftdi_eeprom_decode(ftdi, 1);
 
         eeprom_buf = malloc(my_eeprom_size);
         ftdi_get_eeprom_buf(ftdi, eeprom_buf, my_eeprom_size);
